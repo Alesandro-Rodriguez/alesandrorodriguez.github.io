@@ -69,16 +69,8 @@
             <script type='text/javascript'>
                 var divElement = document.getElementById('viz1744690768448');
                 var vizElement = divElement.getElementsByTagName('object')[0];
-                if (divElement.offsetWidth > 800) {
-                    vizElement.style.width = '1200px';
-                    vizElement.style.height = '627px';
-                } else if (divElement.offsetWidth > 500) {
-                    vizElement.style.width = '1200px';
-                    vizElement.style.height = '627px';
-                } else {
-                    vizElement.style.width = '100%';
-                    vizElement.style.height = '1127px';
-                }
+                vizElement.style.width = '100%';
+                vizElement.style.height = (divElement.offsetWidth * 0.5) + 'px';  // Keeps 1200x600 ratio
                 var scriptElement = document.createElement('script');
                 scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
                 vizElement.parentNode.insertBefore(scriptElement, vizElement);
